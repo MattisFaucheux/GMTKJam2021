@@ -55,6 +55,7 @@ public class Bullet : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
+
         if (tag == "PlayerWhiteBullet")
         {
             if (hit.collider.tag == "EnemyWhite" || hit.collider.tag == "EnemyWhiteBullet")
@@ -84,7 +85,7 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject, 0);
                 return;
             }
-            else if(hit.collider.tag == "Player")
+            else if(hit.collider.tag == "PlayerWhite")
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 return;
@@ -99,14 +100,14 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject, 0);
                 return;
             }
-            else if (hit.collider.tag == "Player")
+            else if (hit.collider.tag == "PlayerBlack")
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 return;
             }
         }
 
-        if(nbRebounds > 0)
+        if (nbRebounds > 0)
         {
 
             dir = hit.normal;
@@ -114,7 +115,10 @@ public class Bullet : MonoBehaviour
             return;
         }
 
+        if (tag != hit.transform.tag)
+        {
+            Destroy(gameObject, 0);
+        }
 
-        Destroy(gameObject, 0);
     }
  }
