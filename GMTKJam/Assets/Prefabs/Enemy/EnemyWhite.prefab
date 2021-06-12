@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7241999094279394601}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.13, y: 7.41, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -111,10 +111,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slowSpeedMultiplicator: 0.25
   rotationSpeed: 0
+  timeBeforeShoot: 1.5
   targetPlayer: 0
   distanceSpawnBullet: 2
   shootReloadTime: 5
-  bulletSpeed: 2
+  bulletSpeed: 15
   numberBullets: 12
   enemyWhiteBullet: {fileID: 9021404640685593607, guid: 6339b8aeb08e32a40b543eaeec796358, type: 3}
   enemyBlackBullet: {fileID: 1227065771605074126, guid: 41db854c44c80cc4882c9d5eaa4fa68d, type: 3}

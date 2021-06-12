@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    bool isSlow;
+    bool isSlow = false;
     [SerializeField] float slowSpeedMultiplicator = 0.25f;
     [SerializeField] float rotationSpeed = 10;
+    [SerializeField] float timeBeforeShoot = 1.5f;
 
     [SerializeField] bool targetPlayer = false;
 
@@ -21,7 +22,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Shoot());
+        StartCoroutine(WaitBeforeShoot());
     }
 
     // Update is called once per frame
@@ -40,6 +41,12 @@ public class Enemy : MonoBehaviour
     public void SetIsSlow(bool isEnemySlow)
     {
         isSlow = isEnemySlow;
+    }
+
+    IEnumerator WaitBeforeShoot()
+    {
+        yield return new WaitForSeconds(timeBeforeShoot);
+        StartCoroutine(Shoot());
     }
 
     IEnumerator Shoot()
