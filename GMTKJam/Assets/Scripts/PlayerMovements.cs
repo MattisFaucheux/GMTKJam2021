@@ -147,10 +147,10 @@ public class PlayerMovements : MonoBehaviour
                     GameObject[] enemies = GameObject.FindGameObjectsWithTag("EnemyWhite");
                     foreach (GameObject gm in enemies)
                     {
-                        Bullet bullet = gm.GetComponent<Bullet>();
-                        if (bullet)
+                        Enemy enemy = gm.GetComponent<Enemy>();
+                        if (enemy)
                         {
-                            bullet.SetIsSlow(true);
+                            enemy.SetIsSlow(true);
                         }
                     }
                 }
@@ -181,10 +181,10 @@ public class PlayerMovements : MonoBehaviour
                     GameObject[] enemies = GameObject.FindGameObjectsWithTag("EnemyBlack");
                     foreach (GameObject gm in enemies)
                     {
-                        Bullet bullet = gm.GetComponent<Bullet>();
-                        if (bullet)
+                        Enemy enemy = gm.GetComponent<Enemy>();
+                        if (enemy)
                         {
-                            bullet.SetIsSlow(true);
+                            enemy.SetIsSlow(true);
                         }
                     }
                 }
@@ -259,10 +259,10 @@ public class PlayerMovements : MonoBehaviour
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("EnemyBlack");
             foreach (GameObject gm in enemies)
             {
-                Bullet bullet = gm.GetComponent<Bullet>();
-                if (bullet)
+                Enemy enemy = gm.GetComponent<Enemy>();
+                if (enemy)
                 {
-                    bullet.SetIsSlow(false);
+                    enemy.SetIsSlow(false);
                 }
             }
         }
@@ -294,10 +294,10 @@ public class PlayerMovements : MonoBehaviour
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("EnemyWhite");
             foreach (GameObject gm in enemies)
             {
-                Bullet bullet = gm.GetComponent<Bullet>();
-                if (bullet)
+                Enemy enemy = gm.GetComponent<Enemy>();
+                if (enemy)
                 {
-                    bullet.SetIsSlow(false);
+                    enemy.SetIsSlow(false);
                 }
             }
         }
