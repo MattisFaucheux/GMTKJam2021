@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7241999094279394581}
   - component: {fileID: 7241999094279394580}
   - component: {fileID: 7241999094279394603}
-  - component: {fileID: 7241999094279394602}
   - component: {fileID: 7241999094279394582}
+  - component: {fileID: 8121974961539277895}
   m_Layer: 0
   m_Name: EnemyWhite
   m_TagString: EnemyWhite
@@ -83,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7241999094279394602
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7241999094279394601}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.75
-  m_Height: 0.75
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7241999094279394582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,3 +105,21 @@ MonoBehaviour:
   numberBullets: 12
   enemyWhiteBullet: {fileID: 9021404640685593607, guid: 6339b8aeb08e32a40b543eaeec796358, type: 3}
   enemyBlackBullet: {fileID: 1227065771605074126, guid: 41db854c44c80cc4882c9d5eaa4fa68d, type: 3}
+--- !u!143 &8121974961539277895
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7241999094279394601}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 0.75
+  m_Radius: 0.75
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}

@@ -87,6 +87,16 @@ public class Bullet : MonoBehaviour
             }
             else if(hit.collider.tag == "PlayerWhite")
             {
+                GameObject[] gameManagers = GameObject.FindGameObjectsWithTag("GameManager");
+                if (gameManagers[0])
+                {
+                    GameManager gm = gameManagers[0].GetComponent<GameManager>();
+                    if (gm)
+                    {
+                        gm.AddDeath();
+                    }
+                }
+
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 return;
             }
@@ -102,6 +112,16 @@ public class Bullet : MonoBehaviour
             }
             else if (hit.collider.tag == "PlayerBlack")
             {
+                GameObject[] gameManagers = GameObject.FindGameObjectsWithTag("GameManager");
+                if (gameManagers[0])
+                {
+                    GameManager gm = gameManagers[0].GetComponent<GameManager>();
+                    if (gm)
+                    {
+                        gm.AddDeath();
+                    }
+                }
+
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 return;
             }

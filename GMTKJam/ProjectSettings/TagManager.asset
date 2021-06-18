@@ -15,6 +15,7 @@ TagManager:
   - EnemyBlackBullet
   - PlayerWhite
   - PlayerBlack
+  - GameManager
   layers:
   - Default
   - TransparentFX

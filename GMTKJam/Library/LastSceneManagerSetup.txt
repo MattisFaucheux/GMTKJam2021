@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/DevLevel.unity
+- path: Assets/Scenes/TestBoucleGameplay/MainMenu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

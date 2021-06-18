@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1656737688281574085}
   - component: {fileID: 1656737688281574090}
   - component: {fileID: 1656737688281574091}
+  - component: {fileID: -633557076524293840}
   m_Layer: 0
   m_Name: PlayerBlack
   m_TagString: PlayerBlack
@@ -100,3 +101,15 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-633557076524293840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656737688281574088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e97596e7917b7a4c91bcfcabafff200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
